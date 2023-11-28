@@ -3,6 +3,8 @@ Layer 1: meta-custom1
 Create a directory structure for the layer.
 Implement a layer.conf file inside the conf subdirectory.
 Include a recipe in the recipes-example directory, e.g., example-recipe.bb.
+
+
 Layer 2: meta-custom2
 
 Create a directory structure for the second layer.
