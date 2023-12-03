@@ -1,27 +1,34 @@
-## Layer 1: meta-custom1
+### VSOMEIP Layer Requirements:
 
-Create a directory structure for the layer.
-Implement a layer.conf file inside the conf subdirectory.
-Include a recipe in the recipes-example directory, e.g., example-recipe.bb.
+1. **VSOMEIP Layer:**
+    - **Purpose:** Integrate the VSOMEIP middleware into the Yocto Project.
+    - **Source Code:** Obtain the VSOMEIP library source code.
+    - **Recipe:** Create a Yocto recipe for VSOMEIP with metadata, sources, dependencies, compilation, and installation instructions.
+    - **Configuration:** Configure VSOMEIP for your project requirements within the layer.
 
+### Libraries Layer Requirements:
 
-## Layer 2: meta-custom2
+2. **Libraries Layer:**
+    - **Purpose:** Manage additional libraries required for your project.
+    - **Dependencies:** Identify and list any external libraries required by your project.
+    - **Recipes:** Create Yocto recipes for each library with appropriate metadata, sources, dependencies, compilation, and installation instructions.
+    - **Integration:** Ensure that libraries are seamlessly integrated into the Yocto build system.
+    - **Configuration:** Configure libraries as needed to align with the project requirements.
 
-Create a directory structure for the second layer.
-Implement a layer.conf file inside the conf subdirectory.
-Include a recipe in the recipes-dependent directory, e.g., dependent-recipe.bb, with a dependency on a recipe from meta-custom1.
-Dependency Between Layers
+### Common Requirements:
 
-Ensure that the second layer (meta-custom2) has a recipe (dependent-recipe.bb) that explicitly depends on a recipe from the first layer (meta-custom1), creating a layer dependency.
-Build Process
-
-Configure the Yocto build environment to source both layers.
-Use Yocto build commands (e.g., bitbake) to build the desired image, considering the dependencies between recipes and layers.
-
-
-
-
-
-## Target:
-
-### pi 3/4
+3. **Yocto Environment:**
+    
+    - **Yocto Project Source Code:** Download the Yocto Project source code.
+    - **Dependencies:** Install necessary dependencies, including Git, Python, and development tools.
+    - **Build Directory:** Set up a build directory using the `oe-init-build-env` script.
+4. **Layer Configuration:**
+    
+    - **Edit Configuration Files:** Modify `local.conf` and `bblayers.conf` to include the VSOMEIP Layer, the Libraries Layer, and any other relevant layers.
+5. **Development Environment:**
+    
+    - **Linux Development Machine:** Use a Linux machine for Yocto development.
+6. **Testing:**
+    
+    - **Target Hardware:** Have the target hardware ready for testing the Yocto-generated image.
+    - **Validation:** Test the integrated VSOMEIP middleware and libraries on the target hardware.
